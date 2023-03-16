@@ -109,6 +109,9 @@ Add the following to `AndroidManifset.xml` right above the `<application>` tag
 ## 4. Receive the data in the UI Controller
 
 ```kotlin
+val viewModel: JokesViewModel by viewModels()
+```
+```kotlin
 //MainActivity.kt
 viewModel.response.observe(this, Observer {
     binding.dataHolderText.text = it
